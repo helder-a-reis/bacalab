@@ -11,6 +11,3 @@ class PostListView(ListView):
 
 class PostDetailView(DetailView):
     model = Post
-
-def profile(request):
-    return render(request, 'blog/profile.html')
