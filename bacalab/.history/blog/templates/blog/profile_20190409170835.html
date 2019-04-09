@@ -1,0 +1,24 @@
+{% extends "bacalab/base.html" %}
+{% block content %}
+{% load static %}
+<h1>Professional Experience</h1>
+<div class="container-fluid">
+
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-header">Product Owner</h5>
+            <i>2018-2019, </i> <a href="https://www.cgm.com/es/index.es.jsp" target="_blank">CompuGroup
+                Medical</a>
+            <a class="badge badge-pill badge-info" data-toggle="collapse" href="#descCGM" role="button"
+                aria-expanded="false"><i class="fas fa-info"></i></a>
+            <div class="collapse multi-collapse" id="descCGM">
+                <div class="card card-body">
+                    Managed functional and technical requirements for the Spain version of a global solution for
+                    healthcare service providers.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content%}

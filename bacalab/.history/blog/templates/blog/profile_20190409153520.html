@@ -1,0 +1,93 @@
+{% extends "bacalab/base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/timeline.css' %}">
+<h1>Helder Reis</h1>
+<div class="container">
+    <div class="page-header">
+        <h1 id="timeline">Professional and Academic Timeline</h1>
+    </div>
+    <ul class="timeline">
+
+        <!-- Data Science course -->
+        <li class="timeline-inverted">
+            <div class="timeline-badge success"><i class="fas fa-award"></i></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">IBM Data Science Professional Certificate</h4>
+                    <p><i>2019,</i>
+                         <a href="https://www.coursera.org/account/accomplishments/specialization/RBUCVUGL4PD7" target="_blank">Coursera</a>
+                            <a class="badge badge-pill badge-info" data-toggle="collapse" href="#descDS" role="button" aria-expanded="false" style="align:left">
+                                <i class="fas fa-info"></i>
+                            </a>
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="collapse multi-collapse" id="descDS">
+                            <div class="card card-body">
+                                Learned Data Science and it's Methodology, performed Data Visualization and Analysis, and created Machine Learning models
+                                using Python and SQL. Completed several labs and assignments on the cloud including a CapstoneProject at the end, available
+                                on my <a href="https://github.com/helder-a-reis/Coursera_Capstone/tree/master/Final" target="_blank">GitHub</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-body">
+                    <!--
+                        <p>Data Science and its Methodology, Python and SQL, Data Visualization and Analysis, Machine Learning models.</p>
+                        <p>Capstone project available on <a href="https://github.com/helder-a-reis/Coursera_Capstone/tree/master/Final">GitHub</a></p>
+                        -->
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="timeline-badge info"><i class="fas fa-briefcase"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">Product Owner</h4>
+                    <p><i>2018-2019, </i> <a href="https://www.cgm.com/es/index.es.jsp" target="_blank">CompuGroup
+                            Medical</a>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <!--
+                    <p>Managed functional and technical requirements for the Spain version of a global solution for healthcare service providers.</p>
+                    -->
+                </div>
+            </div>
+        </li>
+        <li class="timeline-inverted ">
+            <div class="timeline-badge info"><i class="fas fa-briefcase"></i></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">Product Owner</h4>
+                    <p><i>2016-2017 </i><a href="https://www.speexx.com" target="_blank">Speexx</a></p>
+                </div>
+                <div class="timeline-body">
+                    <!--                     <p>Implemented Agile processes with Product Management and Development teams.</p>
+                    <p>Implemented and administrated JIRA, Confluence and TestRail tools.</p>        
+                    <p> Worked with Business Teams in improving internal and external Learning Management System (LMS) tools for online language training.</p> 
+ -->
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="timeline-badge info"><i class="fas fa-briefcase"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">Software Engineer</h4>
+                    <p><i>2016 </i> <a href="https://www.openjawtech.com/" target="_blank">OpenJaw Technologies</a></p>
+                </div>
+                <div class="timeline-body">
+                    <!--                         <p>Development, testing, deployment and support of travel technology using Java, MS SQL, Mongo DB,
+                             Web Services, XML, XSL, Jenkins, Maven, Jasper Reports and other technologies in Windows and Linux environments.</p>
+ -->
+                </div>
+            </div>
+        </li>
+    </ul>
+    This timeline was built using the <a href="https://codepen.io/bsngr/pen/Ifvbi">Bootstrap Timeline</a> - thank you.
+</div>
+{% endblock content%}
