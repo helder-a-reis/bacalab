@@ -1,0 +1,141 @@
+{% extends "bacalab/base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/timeline.css' %}">
+
+<div class="media">
+    <img src="{% static "blog/images/trabalhar.jpg" %}" class="mr-2 rounded align-self-start ">
+    <div class="media-body">
+        <h3 class="mt-0">Helder Reis</h3>
+        I have a degree in Computer Engineering and over 10 years experience in the full Software Development life cycle 
+        including Coding and Product Management.
+        <p>I have an interest in AI, Data Science and related fields, recently finished my "IBM Data Science Professional Certificate", 
+            I invite you to see some of my <a href="#">Projects.</a></p>
+    </div>
+</div>
+
+<div>
+    Visit me on: 
+    <a href="https://www.linkedin.com/in/helder-reis-23740b45/" target="_blank">
+        <i class="fab fa-linkedin" style="font-size: 2em"></i></a>
+    <a href="https://github.com/helder-a-reis" target="_blank"><i class="fab fa-github-square"
+        style="color:black; font-size: 2em"></i></a>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="content-section">
+                <h2>Professional Experience</h2>
+            </div>    
+        </div>
+        <div class="col-md-4">
+            <div class="content-section">
+                <h2>Education</h2>
+            </div>    
+        </div>    
+    </div>
+</div>   
+
+
+<div class="container">
+    <ul class="timeline">
+
+        <!-- Data Science course -->
+        <li class="timeline-inverted">
+            <div class="timeline-badge success"><i class="fas fa-award"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title"><i>2019</i></h4>
+                    <p>
+                        <h5>IBM Data Science Professional Certificate
+                            <a class="badge badge-pill badge-info" data-toggle="collapse" href="#descDS" role="button"
+                                aria-expanded="false"><i class="fas fa-info"></i></a>
+                        </h5>
+                    </p>
+                    <a href="https://www.coursera.org/account/accomplishments/specialization/RBUCVUGL4PD7"
+                            target="_blank">Coursera</a>
+                </div>
+                <div class="collapse multi-collapse" id="descDS">
+                    <div class="card card-body">
+                        Learned Data Science and its Methodology, performed Data Visualization and Analysis, and
+                        created Machine Learning models using Python and SQL. Completed several labs and 
+                        assignments on the cloud including a Capstone Project, available
+                        on my <a href="https://github.com/helder-a-reis/Coursera_Capstone/tree/master/Final"
+                            target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <!-- CompuGroup -->
+        <li class="timeline">
+            <div class="timeline-badge primary"><i class="fas fa-briefcase"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title"><i>2018-2019</i></h4>
+                    <p>
+                        <h5>Product Owner
+                            <a class="badge badge-pill badge-info" data-toggle="collapse" href="#descCGM" role="button"
+                                aria-expanded="false"><i class="fas fa-info"></i></a>                            
+                        </h5>
+                    </p>
+                    <a href="https://www.cgm.com/es/index.es.jsp" target="_blank">CompuGroup
+                        Medical</a>
+                </div>
+                <div class="collapse multi-collapse" id="descCGM">
+                    <div class="card card-body">
+                        Managed functional and technical requirements for the Spain version of a global solution for
+                        healthcare service providers.
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <!-- Speexx -->
+        <li class="timeline">
+            <div class="timeline-badge danger"><i class="fas fa-briefcase"></i></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">Product Owner</h4>
+                    <p>
+                        <i>2016-2017 </i><a href="https://www.speexx.com" target="_blank">Speexx</a>
+                        <a class="badge badge-pill badge-info" data-toggle="collapse" href="#descSp" role="button"
+                            aria-expanded="false"><i class="fas fa-info"></i></a>
+                    </p>
+                </div>
+                <div class="collapse multi-collapse" id="descSp">
+                    <div class="card card-body">
+                        <p>Implemented Agile processes with Product Management and Development teams.</p>
+                        <p>Implemented and administrated JIRA, Confluence and TestRail tools.</p>
+                        <p> Worked with Business Teams in improving internal and external Learning Management System
+                            (LMS) tools for online language training.</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <!-- OpenJaw -->
+        <li class="timeline">
+            <div class="timeline-badge warning"><i class="fas fa-briefcase"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">Software Engineer</h4>
+                    <p><i>2016 </i> <a href="https://www.openjawtech.com/" target="_blank">OpenJaw Technologies</a>
+                        <a class="badge badge-pill badge-info" data-toggle="collapse" href="#descOJ" role="button"
+                        aria-expanded="false"><i class="fas fa-info"></i></a>
+                    </p>
+                </div>
+                <div class="collapse multi-collapse" id="descOJ">
+                    <div class="card card-body">
+                        <p>Development, testing, deployment and support of travel technology using Java, MS SQL, Mongo DB,
+                                Web Services, XML, XSL, Jenkins, Maven, Jasper Reports and other technologies in Windows and Linux environments.</p>
+                    </div>
+                </div>                
+            </div>
+        </li>
+
+</ul>
+This timeline was built using the <a href="https://codepen.io/bsngr/pen/Ifvbi">Bootstrap Timeline</a> - thank you.
+</div>
+{% endblock content%}

@@ -1,0 +1,61 @@
+{% extends "bacalab/base.html" %}
+{% block content %}
+{% load static %}
+
+<div class="media">
+    <img src="{% static "blog/images/trabalhar.jpg" %}" class="mr-2 rounded align-self-start ">
+    <div class="media-body">
+        <h3 class="mt-0">Helder Reis</h3>
+        I have a degree in Computer Engineering and over 10 years experience in the full Software Development life cycle
+        including Coding and Product Management.
+        <p>I have an interest in AI, Data Science and related fields, recently finished my "IBM Data Science
+            Professional Certificate",
+            I invite you to see some of my <a href="#">Projects.</a></p>
+            Visit me on:
+            <a class="badge" href="https://www.linkedin.com/in/helder-reis-23740b45/" target="_blank">
+                <i class="fab fa-linkedin" style="font-size: 1em"></i></a>
+            <a class="badge" href="https://github.com/helder-a-reis" target="_blank"><i class="fab fa-github-square"
+                    style="color:black; font-size: 1em"></i></a>
+        
+    </div>
+</div>
+
+<div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="content-section">
+                <h4>Professional Experience</h4>
+
+                {% for job in jobs%}                
+                    <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ job.title }} <a class="badge badge-pill badge-info"
+                                        data-toggle="collapse" href="#desc{{ forloop.counter }}" role="button" aria-expanded="false">+
+                                        info</a> </h5>
+                                <h6 class="card-subtitle mb-2 text-muted">
+                                    <a href="{{ job.companyURL }}" target="_blank">{{ job.companyName }}</a>, <i>{{ job.startYear }}
+                                        -{{ job.endYear }}, {{ job.location }}</i>
+                                </h6>
+                                <div class="collapse multi-collapse" id="desc{{ forloop.counter }}">
+                                    <div class="card card-body">
+                                       {{ job.description|linebreaks }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                    
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="content-section">
+                <h4>Education</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content%}

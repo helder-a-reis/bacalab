@@ -1,0 +1,141 @@
+{% extends "bacalab/base.html" %}
+{% block content %}
+{% load static %}
+
+<div class="row">
+    <div class="col-md-8">
+
+        <div class="media content-section" id="summary-section">
+            <img src="{% static "blog/images/trabalhar.jpg" %}" class="mr-2 rounded align-self-start ">
+            <div class="media-body">
+                <h3 class="mt-0">Helder Reis</h3>
+                I have a degree in Computer Engineering and over 10 years experience in the full Software Development
+                life cycle
+                including Coding and Product Management.
+                <p>I also have an interest and training in AI, Data Science and related fields, having recently obtained
+                    a "IBM Data Science
+                    Professional Certificate".
+            </div>
+        </div>
+
+        <div class="content-section" id="education-section">
+            <h4>Education</i></h4>
+            <!-- Degree -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-graduation-cap"></i> Degree in Computer Engineering <a
+                            class="badge badge-pill badge-info" data-toggle="collapse" href="#descDegree" role="button"
+                            aria-expanded="false">+
+                            info</a> </h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        <a href="https://www.ipleiria.pt/cursos/course/undergraduate-in-computer-engineering/"
+                            target="_blank">Instituto Politécnico de Leiria, Portugal</a>, <i>2004-2009</i>
+                    </h6>
+                    <div class="collapse multi-collapse" id="descDegree">
+                        <div class="card card-body">
+                            Study areas included software development, planning and configuration of networks and services, security, 
+                            mobile computing, administration and intelligent data analysis, among other valences.<br>
+                            Took night-courses while working during the day. <br> Final project was a text classification web application. <br>
+                            Obtained a final score of 15/20.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- IBM Certificate -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-award"></i> IBM Data Science Professional Certificate
+                        Specialization <a class="badge badge-pill badge-info" data-toggle="collapse" href="#descIBM"
+                            role="button" aria-expanded="false">+
+                            info</a> </h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        <a href="https://www.coursera.org/account/accomplishments/specialization/RBUCVUGL4PD7"
+                            target="_blank">Coursera (view certificate)</a>, <i>2019</i>
+                    </h6>
+                    <div class="collapse multi-collapse" id="descIBM">
+                        <div class="card card-body">
+                            Learned Data Science and its Methodology, performed Data Visualization and Analysis, and
+                            created Machine Learning models using Python and SQL. Completed several labs and
+                            assignments on the cloud including a Capstone Project, available
+                            on my <a href="https://github.com/helder-a-reis/Coursera_Capstone/tree/master/Final"
+                                target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Udacity AI -->
+        <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-chalkboard"></i> Artificial Intelligence - Term 1 
+                        <a class="badge badge-pill badge-info" data-toggle="collapse" href="#descAI"
+                            role="button" aria-expanded="false">+
+                            info</a> </h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        <a href="https://eu.udacity.com/course/artificial-intelligence-nanodegree--nd889"
+                            target="_blank">Udacity</a>, <i>2018</i>
+                    </h6>
+                    <div class="collapse multi-collapse" id="descAI">
+                        <div class="card card-body">
+                            Learned essential Artificial Intelligence concepts including search, optimization, planning, 
+                            pattern recognition, and more. Final project was blablabla available on my <a href="https://github.com/helder-a-reis/Coursera_Capstone/tree/master/Final"
+                                target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+        <div class="content-section" id="experience-section">
+            <h4>Professional Experience</h4>
+
+            {% for job in jobs%}
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-briefcase"></i> {{ job.title }} <a
+                            class="badge badge-pill badge-info" data-toggle="collapse" href="#desc{{ forloop.counter }}"
+                            role="button" aria-expanded="false">+
+                            info</a> </h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        <a href="{{ job.companyURL }}" target="_blank">{{ job.companyName }}</a>, <i>{{ job.startYear }}
+                            - {{ job.endYear }}, {{ job.location }}</i>
+                    </h6>
+                    <div class="collapse multi-collapse" id="desc{{ forloop.counter }}">
+                        <div class="card card-body">
+                            {{ job.description|linebreaks }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+
+    </div>
+
+    <div class="col-md-4">
+        <div class="content-section">
+            <h4>Overview</i></h4>
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item"><a href="#summary-section"><i class="far fa-bookmark"></i> Summary</a></li>
+                <li class="list-group-item"><a href="#education-section"><i class="fas fa-award"> </i> Education</a>
+                <li class="list-group-item"><a href="#experience-section"><i class="fas fa-briefcase"></i> Professional
+                        experience</a></li>
+                </li>
+            </ul>
+            <div>
+                Also visit me at:
+                <a class="badge" href="https://www.linkedin.com/in/helder-reis-23740b45/" target="_blank">
+                    <i class="fab fa-linkedin" style="font-size: 2em"></i></a>
+                <a class="badge" href="https://github.com/helder-a-reis" target="_blank"><i class="fab fa-github-square"
+                        style="color:black; font-size: 2em"></i></a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock content%}
