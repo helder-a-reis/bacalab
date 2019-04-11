@@ -7,12 +7,11 @@
         <article class="media content-section">
             <div class="media-body">
                 <div class="article-metadata">
-                    <a class="mr-2" href="{% url 'profile' %}">{{ post.author.first_name }} {{ post.author.last_name }}</a>
+                    <a class="mr-2" href="{#}">{{ post.author.first_name }} {{ post.author.last_name }}</a>
                         <small class="text-muted">{{ post.date_posted|date:"d F, Y" }}</small>
                     </div>
                     <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
-                    <!-- show only the first 50 words of the blog post, as a teaser -->
-                    <p class="article-content">{{ post.content|truncatewords:50 }} <a href="{% url 'post-detail' post.id %}"> (more)</a> </p>
+                    <p class="article-content">{{ post.content }}</p>
                 </div>
         </article>
     {% endfor %}
@@ -38,14 +37,18 @@
         {% endif %}
     {% endif %}
     </div>
-
-    <!-- Sidebar -->
     <div class="col-md-4">
         <div class="content-section">
-            <h4>About Bacalab</h4>
-            <p>BacaLab is a a portfolio website built by <a href="{% url 'profile' %}">Helder Reis</a> using Django and Bootstrap.</p>
+            <h4 class="text-center">About Bacalab</h4>
+            <p>BacaLab is a website built by <a href="{% url 'profile' %}">Helder Reis</a> using Django and Bootstrap.</p>
             <p>The code is available on my <a href="https://github.com/helder-a-reis/bacalab/tree/master/bacalab">Github</a> (feel free to
             reuse but please credit if you do!)</p>
+            <div>
+                <a href="https://www.linkedin.com/in/helder-reis-23740b45/" target="_blank"><i
+                        class="fab fa-linkedin" style="font-size: 2em"></i></a>
+                <a href="https://github.com/helder-a-reis" target="_blank"><i class="fab fa-github-square"
+                        style="color:black; font-size: 2em"></i></a>
+            </div>
         </div>
     </div>
 </div>

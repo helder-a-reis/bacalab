@@ -45,7 +45,7 @@
                         <span class="navbar-text">
                             <i>by <a href="{% url 'profile' %}">Helder Reis</a></i> 
                         </span>
-                        <a class="nav-item nav-link" href="https://www.linkedin.com/in/helder-a-reis/" target="_blank"><i
+                        <a class="nav-item nav-link" href="https://www.linkedin.com/in/helder-reis-23740b45/" target="_blank"><i
                             class="fab fa-linkedin" style="font-size: 1.5em"></i></a>
                         <a class="nav-item nav-link" href="https://github.com/helder-a-reis" target="_blank"><i class="fab fa-github-square"
                             style="font-size: 1.5em"></i></a>
@@ -55,19 +55,25 @@
             </div>
         </nav>
     </header>
+    <ul class="list-group list-group-horizontal">
+            <li class="list-group-item"><a href="#summary-section"><i class="far fa-bookmark"></i> Summary</a></li>
+            <li class="list-group-item"><a href="#education-section"><i class="fas fa-award"> </i> Education</a>
+            <li class="list-group-item"><a href="#experience-section"><i class="fas fa-briefcase"></i> Professional
+                    experience</a></li>
+            </li>
+        </ul>
 
     <main role="main" class="container">
         {% block content %}{% endblock %}
     </main>
     
-    <!-- Footer -->
-<!--     <footer class="footer mt-auto py-3">
+<!-- Footer
+    <footer class="footer mt-auto py-3">
         <div class="container">
            <span class="text-muted">© Helder Reis</span>
         </div>
-    </footer> -->
-
-
+    </footer>
+-->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

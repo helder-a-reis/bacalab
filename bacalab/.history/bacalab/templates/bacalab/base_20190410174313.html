@@ -37,18 +37,16 @@
                         <a class="nav-item nav-link" href="{% url 'blog-home' %}"><i class="fas fa-book-open"></i> Blog</a>
                         <a class="nav-item nav-link" href="{% url 'blog-home' %}"><i class="fas fa-flask"></i> Projects</a>
                         <a class="nav-item nav-link" href="#"><i class="fas fa-music"></i> Music</a>
-                        <a class="nav-item nav-link" href="{% url 'profile' %}"><i class="far fa-id-card"></i> Profile</a>
-                        <a class="nav-item nav-link" href="#"><i class="fas fa-paper-plane"></i> Contact</a>                        
                     </div>
                     <!-- Navbar Right Side -->
                     <div class="navbar-nav">
-                        <span class="navbar-text">
-                            <i>by <a href="{% url 'profile' %}">Helder Reis</a></i> 
-                        </span>
-                        <a class="nav-item nav-link" href="https://www.linkedin.com/in/helder-a-reis/" target="_blank"><i
-                            class="fab fa-linkedin" style="font-size: 1.5em"></i></a>
+                        <a class="nav-item nav-link" href="{% url 'profile' %}"><i class="far fa-id-card"></i> Profile</a>
+                        <a class="nav-item nav-link" href="#"><i class="fas fa-paper-plane"></i> Contact</a>                        
+
+                        <a class="nav-item nav-link" href="https://www.linkedin.com/in/helder-reis-23740b45/" target="_blank"><i
+                            class="fab fa-linkedin" style="font-size: 1.5em; color: white"></i></a>
                         <a class="nav-item nav-link" href="https://github.com/helder-a-reis" target="_blank"><i class="fab fa-github-square"
-                            style="font-size: 1.5em"></i></a>
+                            style="color:white; font-size: 1.5em"></i></a>
     
                     </div>
                 </div>
@@ -60,14 +58,13 @@
         {% block content %}{% endblock %}
     </main>
     
-    <!-- Footer -->
-<!--     <footer class="footer mt-auto py-3">
+<!-- Footer
+    <footer class="footer mt-auto py-3">
         <div class="container">
            <span class="text-muted">© Helder Reis</span>
         </div>
-    </footer> -->
-
-
+    </footer>
+-->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
