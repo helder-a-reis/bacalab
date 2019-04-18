@@ -1,7 +1,8 @@
-{% load static %}
 <div class="card mb-4 shadow-sm">
-        <h3 class="card-title">{{ project.title }}</h3>
-        <img class="img-fluid" src="{{ project.thumb.url }}">
+    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+        <title>{{ project.title }}</title>
+        <img src="{{ projects.thumb.url }}">
     </svg>
     <div class="card-body">
         <p class="card-text">{{ project.teaser }}</p>

@@ -17,14 +17,15 @@
 <div class="album py-5 bg-light">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">                
-                {% include 'base/teaser.html' with project=project1 %}            
+            <div class="col-md-4">
+                {{ projects.title }}
+                {% include 'base/teaser.html' with project=projects %}            
             </div>
             <div class="col-md-4">
-                {% include 'base/teaser.html' with project=project2 %}
+                {% include 'base/teaser.html'%}
             </div>
             <div class="col-md-4">
-                {% include 'base/teaser.html' with project=project3 %}
+                {% include 'base/teaser.html'%}
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 {% load static %}
 <div class="card mb-4 shadow-sm">
-        <h3 class="card-title">{{ project.title }}</h3>
-        <img class="img-fluid" src="{{ project.thumb.url }}">
+        <title>{{ project.title }}</title>
+        <img src="{% static projects.thumb.url %}">
     </svg>
     <div class="card-body">
         <p class="card-text">{{ project.teaser }}</p>
