@@ -1,0 +1,34 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to BacaLab!</h1>
+    <p class="lead">An online portfolio built using Django and Bootstrap.</p>
+    <p><i>Helder</i></p>
+    <hr class="my-4">
+    <p>I invite you to visit my profile page to learn about my professional and academic background, as well as 
+        some of my past and ongoing personal projects below.</p>
+    <a class="btn btn-primary" href="{% url 'profile' %}" role="button">View my profile</a>
+</div>
+
+<!-- Showcase -->
+<div class="container">
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    {% include 'base/teaser.html' with project=project1 %}
+                </div>
+                <div class="col-md-4">
+                    {% include 'base/teaser.html' with project=project2 %}
+                </div>
+                <div class="col-md-4">
+                    {% include 'base/teaser.html' with project=project3 %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content%}

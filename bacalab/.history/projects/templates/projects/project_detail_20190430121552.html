@@ -1,0 +1,10 @@
+{% extends "base/base.html" %}
+{% block content %}
+    {{ object.projectKey }}
+    {{ object.title }}
+    <!-- TODO: there is probably a more correct way to do this -->
+    {% with "projects/"|add:object.projectKey|add:".html" as template %}
+        {% include template %}
+    {% endwith %}
+    
+{% endblock content%}

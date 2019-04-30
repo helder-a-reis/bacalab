@@ -1,0 +1,6 @@
+{% extends "base/base.html" %}
+{% block content %}
+    {{ object.projectKey }}
+    {{ object.title }}
+    {% include ' object.projectKey .html' %}
+{% endblock content%}

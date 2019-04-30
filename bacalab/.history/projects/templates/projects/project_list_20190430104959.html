@@ -1,0 +1,17 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <p>These are some of my past and ongoing personal projects.</p>
+        {% for project in projects %}
+            {{ project.title }}
+        {% endfor %}
+    </div>
+
+    <!-- Sidebar -->
+    <div class="col-md-4">
+        {% include "base/sidebar.html" %}
+    </div>
+</div>
+{% endblock content%}

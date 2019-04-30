@@ -1,0 +1,35 @@
+{% extends "base/base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <h1>Projects</h1>
+        <p>These are some of my past and ongoing personal projects.</p>
+        
+        {% for project in projects %}
+            <div class="card mb-3">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img class="img-fluid img-thumbnail border-0" src="{{ project.thumb.url }}">
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="card-title"><h4>{{ project.title }}</h4></div>
+                            <p class="card-text">{{ project.teaser }}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    
+    </div>
+
+    <!-- Sidebar -->
+    <div class="col-md-4">
+        {% include "base/sidebar.html" %}
+    </div>
+</div>
+{% endblock content%}
