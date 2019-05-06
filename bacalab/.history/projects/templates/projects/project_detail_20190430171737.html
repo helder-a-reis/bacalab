@@ -1,0 +1,20 @@
+{% extends "base/base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <h1>{{ object.title }}</h1>
+        <p>{{ object.description|safe|linebreaks }}</p>
+
+        {% for each ilustration in object.ilustration_set %}
+            {{ ilustration.caption }}
+        {% endfor %}
+
+
+    </div>
+
+    <!-- Sidebar -->
+    <div class="col-md-4">
+        {% include "base/sidebar.html" %}
+    </div>
+</div>
+{% endblock content%}

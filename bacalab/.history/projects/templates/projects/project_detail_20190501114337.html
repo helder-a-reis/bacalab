@@ -1,0 +1,44 @@
+{% extends "base/base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <h1>{{ object.title }}</h1>
+
+        <!-- Carousel with all the project's ilustrations -->
+
+        <div class="bd-example">
+            <div id="projectCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    {% for ilust in object.ilustration_set.all %}
+                        {% if forloop.first %}
+                            <div class="carousel-item active">
+                                <img src="{{ ilust.picture.url }}" class="d-block">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>{{ ilust.caption }}</h5>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="carousel-item">
+                                <img src="{{ ilust.picture.url }}" class="d-block">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>{{ ilust.caption }}</h5>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <p>{{ object.description|safe|linebreaks }}</p>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="col-md-4">
+        {% include "base/sidebar.html" %}
+    </div>
+</div>
+{% endblock content%}

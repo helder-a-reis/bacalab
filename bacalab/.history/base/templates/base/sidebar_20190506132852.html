@@ -1,0 +1,35 @@
+{% load static %}
+
+<div class="content-section">
+    <h4 class="text-left">About Bacalab</h4>
+    <div class="media">
+        <img src="{% static "resume/images/trabalhar.jpg" %}" class="rounded-circle article-img">
+        <div class="media-body">
+            <p>BacaLab is my personal website built using Django and Bootstrap.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            I use it to learn and practice Django and web development as well as to showcase some of
+            my past and ongoing personal software and musical projects. <br>
+            I invite you to visit my profile and get in touch 
+            using the <a href="#">Contact form</a> or via LinkedIn. <br>
+            Thanks for visiting!                     
+        </div>
+        <div class="row">
+            <div class="col text-left">
+                <i><a href="{% url 'profile' %}">Helder Reis</i></a>
+            </div>
+            <div class="col text-left">
+                <a href="https://www.linkedin.com/in/helder-a-reis/" target="_blank">
+                    <i class="fab fa-linkedin" style="font-size: 1.5em"></i></a>
+                <a href="https://github.com/helder-a-reis" target="_blank"><i class="fab fa-github-square"
+                        style="font-size: 1.5em"></i></a>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>

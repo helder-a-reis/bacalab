@@ -1,0 +1,20 @@
+{% extends "base/base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <h1>{{ object.title }}</h1>
+
+        <!-- Carousel with all the project's ilustrations -->
+        {% for a in object.ilustration_set.all %}
+            <p>{{ a.caption }}</p>
+        {% endfor %}
+
+        <p>{{ object.description|safe|linebreaks }}</p>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="col-md-4">
+        {% include "base/sidebar.html" %}
+    </div>
+</div>
+{% endblock content%}

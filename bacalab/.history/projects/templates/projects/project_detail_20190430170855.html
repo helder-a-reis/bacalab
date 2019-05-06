@@ -1,0 +1,20 @@
+{% extends "base/base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <h1>{{ object.title }}</h1>
+        <pre>{{ object.description|safe }}</pre>
+
+        <!-- Render project specific content -->
+        <!-- TODO: there is probably a more correct way to do this -->
+        {% with "projects/"|add:object.projectKey|add:".html" as template %}
+            {% include template %}
+        {% endwith %}
+    </div>
+
+    <!-- Sidebar -->
+    <div class="col-md-4">
+        {% include "base/sidebar.html" %}
+    </div>
+</div>
+{% endblock content%}

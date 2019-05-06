@@ -1,0 +1,13 @@
+<article class="media content-section">
+    <div class="media-body">
+        <div class="article-metadata">
+            <a class="mr-2" href="{% url 'profile' %}">{{ post.author.first_name }} {{ post.author.last_name }}</a>
+            <small class="text-muted">{{ post.date_posted|date:"d F, Y" }}</small>
+        </div>
+        <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+        <!-- show only the first 50 words of the blog post, as a teaser -->
+        <p class="article-content">{{ post.content|truncatewords:50 }} 
+            <p><a class="btn btn-primary" href="{% url 'post-detail' post.id %}" role="button">Read more
+                        &raquo;</a></p> </p>
+    </div>
+</article>

@@ -1,0 +1,19 @@
+{% extends "base/base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <h1>Projects</h1>
+        <p>These are some of my past and ongoing personal projects.</p>
+        
+        {% for p in projects %}
+            {% include 'project/project_teaser.html' with project=p %}
+        {% endfor %}
+    
+    </div>
+
+    <!-- Sidebar -->
+    <div class="col-md-4">
+        {% include "base/sidebar.html" %}
+    </div>
+</div>
+{% endblock content%}
