@@ -13,7 +13,7 @@
                 <div class="d-flex justify-content-between align-items-center">
                     <p>
                         <a class="btn btn-primary" href="{% url 'project-detail' project.id %}" role="button">View details &raquo;</a>
-                        <a class="btn btn-secondary" href="{% url 'projects-home' %}" role="button">View all Projects &raquo;</a>
+                        <a class="btn btn-secondary" href="{% url 'projects-home' project.id %}" role="button">View all Projects &raquo;</a>
                     </p>
                 </div>
             </div>
