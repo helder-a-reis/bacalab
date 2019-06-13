@@ -12,7 +12,8 @@
                 <p class="card-text">{{ project.teaser }}</p>
                 <div>
                     <p>
-                        <a class="btn btn-primary" href="{% url 'project-detail' project.id %}" role="button">View details &raquo;</a>                        
+                        <a class="btn btn-primary" href="{% url 'project-detail' project.id %}" role="button">View details &raquo;</a>
+                        <a class="btn btn-secondary" href="{% url 'projects-home' %}" role="button">View all Projects &raquo;</a>
                     </p>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 <div class="card mb-3">
     <div class="row no-gutters">
         <div class="col-md-4">
-            <img class="teaser-img img-thumbnail border-0 " src="{{ project.thumb.url }}">
+            <img class="img-thumbnail teaser-img border-0 " src="{{ project.thumb.url }}">
         </div>
 
         <div class="col-md-8">
@@ -10,9 +10,10 @@
                     <h4>{{ project.title }}</h4>
                 </div>
                 <p class="card-text">{{ project.teaser }}</p>
-                <div>
+                <div class="d-flex justify-content-between align-items-left">
                     <p>
-                        <a class="btn btn-primary" href="{% url 'project-detail' project.id %}" role="button">View details &raquo;</a>                        
+                        <a class="btn btn-primary" href="{% url 'project-detail' project.id %}" role="button">View details &raquo;</a>
+                        <a class="btn btn-secondary" href="{% url 'projects-home' %}" role="button">View all Projects &raquo;</a>
                     </p>
                 </div>
             </div>

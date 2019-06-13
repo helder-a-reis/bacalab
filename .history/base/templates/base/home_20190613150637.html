@@ -37,14 +37,14 @@
 
     </div>
 
-    <div class="col-md-6">
-        <h2 class="mt-5 mb-3">Highlighted Project</h2>
+    <div class="col-md-12">
+        <h2 class="mt-5 mb-3 text-center">Highlighted Project</h2>
         {% include 'projects/project_teaser.html' with project=highProject %}
-    </div>
+        <a class="btn btn-secondary" href="{% url 'projects-home' %}" role="button">View all Projects &raquo;</a>
 
-    <div class="col-md-6">
         <h2 class="mt-5 mb-3">Latest blog entry</h2>
-        {% include 'blog/post_teaser.html' with post=latestPost %}    
+        {% include 'blog/post_teaser.html' with post=latestPost %}
+        <a class="btn btn-secondary" href="{% url 'blog-home' %}" role="button">View all Articles &raquo;</a>
     </div>
 
 

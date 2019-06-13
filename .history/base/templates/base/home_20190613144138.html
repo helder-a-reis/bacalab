@@ -28,33 +28,15 @@
 
 <!-- Change the  variables in views to view other posts or projects -->
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-8">
 
-        <div class="jumbotron mt-5">
-            <h1 class="display-4 text-center">Welcome to BacaLab</h1>
-            <p class="lead text-center mt-5">A personal portfolio website built using Django and Bootstrap.</p>
-        </div>
-
-    </div>
-
-    <div class="col-md-6">
-        <h2 class="mt-5 mb-3">Highlighted Project</h2>
+        <h2 class="mt-5">Highlighted Project</h2>
         {% include 'projects/project_teaser.html' with project=highProject %}
+
+        <h2 class="mt-5">Latest blog entry</h2>
+        {% include 'blog/post_teaser.html' with post=latestPost %}
     </div>
-
-    <div class="col-md-6">
-        <h2 class="mt-5 mb-3">Latest blog entry</h2>
-        {% include 'blog/post_teaser.html' with post=latestPost %}    
-    </div>
-
-
-
-
-
-
-
-
 </div>
 
 
-{% endblock content%}
+    {% endblock content%}

@@ -30,31 +30,15 @@
 <div class="row">
     <div class="col-md-12">
 
-        <div class="jumbotron mt-5">
-            <h1 class="display-4 text-center">Welcome to BacaLab</h1>
-            <p class="lead text-center mt-5">A personal portfolio website built using Django and Bootstrap.</p>
-        </div>
-
-    </div>
-
-    <div class="col-md-6">
         <h2 class="mt-5 mb-3">Highlighted Project</h2>
         {% include 'projects/project_teaser.html' with project=highProject %}
-    </div>
+        <a class="btn btn-secondary" href="{% url 'projects-home' %}" role="button">View all Projects &raquo;</a>
 
-    <div class="col-md-6">
         <h2 class="mt-5 mb-3">Latest blog entry</h2>
-        {% include 'blog/post_teaser.html' with post=latestPost %}    
+        {% include 'blog/post_teaser.html' with post=latestPost %}
+        <p><a class="btn btn-primary" href="{% url 'post-detail' post.id %}" role="button">Read more &raquo;</a></p> </p>
     </div>
-
-
-
-
-
-
-
-
 </div>
 
 
-{% endblock content%}
+    {% endblock content%}
