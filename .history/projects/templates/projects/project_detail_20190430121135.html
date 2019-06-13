@@ -1,9 +1,0 @@
-{% extends "base/base.html" %}
-{% block content %}
-    {{ object.projectKey }}
-    {{ object.title }}
-    {% with "project/"|add:object.projectKey|add:".html" as template %}
-        {% include template %}
-    {% endwith %}
-    
-{% endblock content%}
