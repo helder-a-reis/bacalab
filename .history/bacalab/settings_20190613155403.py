@@ -23,12 +23,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG_VALE')
+DEBUG = (os.environ.get('DEBUG_VALUE'))
 
-ALLOWED_HOSTS = ['bacalab.herokuapp.com']
 
 
 # Application definition
+
+ALLOWED_HOSTS = ['localhost', 'bacalab.herokuapp.com']
 
 INSTALLED_APPS = [
     'base.apps.BaseConfig',
@@ -74,15 +75,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'bacalab.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
 
 
 # Password validation
@@ -126,3 +118,4 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+

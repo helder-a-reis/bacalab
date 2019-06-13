@@ -1,6 +1,7 @@
 from .base import *
 import django_heroku 
 
+
 ALLOWED_HOSTS = ['bacalab.herokuapp.com']
 
 # Database
